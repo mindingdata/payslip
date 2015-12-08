@@ -12,6 +12,5 @@ namespace Payslip.Domain
         public string Lastname { get; set; }
         public decimal AnnualSalary { get; set; }
         public decimal SuperRate { get; set; }
-        public DateTime Month { get; set; }
     }
 }

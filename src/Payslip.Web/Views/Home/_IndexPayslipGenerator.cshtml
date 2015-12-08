@@ -3,4 +3,22 @@
 @if (Model.ErrorParsing)
 {
     <p class="bg-danger" style="padding:15px;">Your CSV input was unable to be parsed. Sorry about that!</p>
+}else if (Model.Payslips != null && Model.Payslips.Count > 0)
+{
+    foreach (var payslip in Model.Payslips)
+    {
+        <h4>@payslip.Firstname @payslip.Lastname</h4>
+        <span>For Month : @payslip.PaymentMonth.ToString("MMMM")</span><br/>
+        <span>Gross Income :</span>
+        @payslip.GrossIncome
+        <br/>
+        <span>Net Income : </span>
+        @payslip.NetIncome
+        <br/>
+        <span>Income Tax : </span>
+        @payslip.IncomeTax
+        <br/>
+        <span>Super : </span>
+        @payslip.Super
+    }
 }

@@ -42,20 +42,27 @@
     <Compile Include="EmployeeImports\EmployeeParserLastname.cs" />
     <Compile Include="EmployeeImports\EmployeeParserSalary.cs" />
     <Compile Include="EmployeeImports\EmployeeParserSuper.cs" />
+    <Compile Include="IPayslipService.cs" />
+    <Compile Include="PayslipService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EmployeeImports\EmployeeParserFirstname.cs" />
     <Compile Include="EmployeeImports\EmployeeParserService.cs" />
     <Compile Include="EmployeeImports\IEmployeeParser.cs" />
     <Compile Include="EmployeeImports\IEmployeeParserService.cs" />
+    <Compile Include="TaxCalculators\IIncomeTaxCalculator.cs" />
+    <Compile Include="TaxCalculators\IncomeTaxCalculator.cs" />
+    <Compile Include="TaxCalculators\IncomeTaxCalculators\IIncomeTax.cs" />
+    <Compile Include="TaxCalculators\IncomeTaxCalculators\IncomeTax180000.cs" />
+    <Compile Include="TaxCalculators\IncomeTaxCalculators\IncomeTax18200.cs" />
+    <Compile Include="TaxCalculators\IncomeTaxCalculators\IncomeTax37000.cs" />
+    <Compile Include="TaxCalculators\IncomeTaxCalculators\IncomeTax80000.cs" />
+    <Compile Include="TaxCalculators\IncomeTaxCalculators\IncomeTaxMax.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Payslip.Domain\Payslip.Domain.csproj">
       <Project>{430b3c8e-d31e-4f35-a0a5-ac71f4edc4a0}</Project>
       <Name>Payslip.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TaxCalculators\IncomeTaxCalculators\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

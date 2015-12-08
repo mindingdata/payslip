@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{430B3C8E-D31E-4F35-A0A5-AC71F4EDC4A0}</ProjectGuid>
+    <ProjectGuid>{B2AA14DB-A661-4EDA-AA17-C7A5EA86B3FD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Payslip.Domain</RootNamespace>
-    <AssemblyName>Payslip.Domain</AssemblyName>
+    <RootNamespace>Payslip.Services.Test</RootNamespace>
+    <AssemblyName>Payslip.Services.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.1.12217, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.1\lib\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,9 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
-    <Compile Include="Payslip.cs" />
+    <Compile Include="EmployeeParserTests.cs" />
+    <Compile Include="IncomeTaxTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Payslip.Domain\Payslip.Domain.csproj">
+      <Project>{430b3c8e-d31e-4f35-a0a5-ac71f4edc4a0}</Project>
+      <Name>Payslip.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Payslip.Services\Payslip.Services.csproj">
+      <Project>{56134a47-01af-4a76-96c2-50728ab7f862}</Project>
+      <Name>Payslip.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

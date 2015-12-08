@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payslip.Domain", "Payslip.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payslip.Services", "Payslip.Services\Payslip.Services.csproj", "{56134A47-01AF-4A76-96C2-50728AB7F862}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payslip.Services.Test", "Payslip.Services.Test\Payslip.Services.Test.csproj", "{B2AA14DB-A661-4EDA-AA17-C7A5EA86B3FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{56134A47-01AF-4A76-96C2-50728AB7F862}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56134A47-01AF-4A76-96C2-50728AB7F862}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56134A47-01AF-4A76-96C2-50728AB7F862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2AA14DB-A661-4EDA-AA17-C7A5EA86B3FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2AA14DB-A661-4EDA-AA17-C7A5EA86B3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2AA14DB-A661-4EDA-AA17-C7A5EA86B3FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2AA14DB-A661-4EDA-AA17-C7A5EA86B3FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

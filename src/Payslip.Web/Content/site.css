@@ -1,0 +1,9 @@
+﻿body {
+    padding-top:30px;
+}
+
+#inputs textarea {
+    width:100%;
+    display:block;
+margin-bottom:5px;
+}

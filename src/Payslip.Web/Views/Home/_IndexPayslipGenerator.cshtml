@@ -1,0 +1,6 @@
+﻿@model Payslip.Web.Models.Home.IndexViewModel
+ 
+@if (Model.ErrorParsing)
+{
+    <p class="bg-danger" style="padding:15px;">Your CSV input was unable to be parsed. Sorry about that!</p>
+}

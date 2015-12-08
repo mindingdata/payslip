@@ -1,0 +1,33 @@
+﻿@model Payslip.Web.Models.Home.IndexViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Payslip Generator</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Payslip Generator</h1>
+        <p class="lead">Copy and paste your CSV input below. Hit Run. Get your payslips! </p>
+    </div>
+    <div id="inputs">
+        <h3>Inputs</h3>
+        @using (Html.BeginForm())
+        {
+            @Html.TextAreaFor(model => model.Input)
+            <input type="submit" value="Run"  class="btn btn-success"/>
+        }
+    </div>
+    <div id="outputs">
+        <h3>Outputs</h3>
+        @Html.Partial("_IndexPayslipGenerator", this.Model)
+    </div>
+</div>
+</body>
+</html>
